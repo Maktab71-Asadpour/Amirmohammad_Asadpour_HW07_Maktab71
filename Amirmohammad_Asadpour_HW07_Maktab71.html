@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            div.tamrin {
+                border: medium solid blue;
+                margin-bottom: 80px;
+                margin-right: 8px;
+                margin-left: 8px;
+                padding: 16px;
+            }
+
+            #tamrin-1-1, #tamrin-1-2, #tamrin-extra {
+                width: 100px;
+                height: 70px;
+                text-align: center;
+                background-color: #ffff1e;
+            }
+
+            #tamrin-1-1:hover {
+                background-color: #640064;
+            }
+
+            #tamrin-1-2:hover {
+                transform: translate(60px,100px);
+            }
+
+            table, tr, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+                padding: 8px;
+            }
+
+            @media only screen and (max-width: 1200px) {
+                
+                #tamrin-2 {
+                    max-width: 80%;
+                }
+            }
+
+            @media only screen and (max-width: 900px) {
+                
+                #tamrin-2 {
+                    max-width: 40%;
+                }
+            }
+
+            @keyframes myAnimation {
+                from {left: 0%;}
+                to {left: 100%;}
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>Tamrin 1</p>
+        <div class="tamrin">
+            <p>Tamrin 1.1</p>
+            <div id="tamrin-1-1"></div>
+            <br>
+            <p>Tamrin 1.2</p>
+            <div id="tamrin-1-2">test box</div>
+        </div>
+        
+        
+        <p>Tamrin 2 & 3</p>
+        <div class="tamrin">
+            <table id="tamrin-2" style="width: 100%;">
+                <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+                <tr>
+                    <td colspan="2">test</td>
+                    <td>test</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+            </table>
+        </div>
+        
+        
+        <p>Tamrin Extra point</p>
+        <div class="tamrin">
+            <div id="tamrin-extra" style="position: relative; animation-name: myAnimation; animation-duration: 1s; animation-iteration-count: 20;"></div>
+        </div>    
+    </body>
+</html>
+
